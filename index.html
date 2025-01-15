@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharePlate - Food Sharing Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/@lucide/web/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i data-lucide="heart" class="h-8 w-8 text-rose-500"></i>
+                    <span class="ml-2 text-xl font-bold text-gray-800">SharePlate</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-rose-500">Home</a>
+                    <a href="donate.html" class="text-gray-600 hover:text-rose-500">Donate Food</a>
+                    <a href="volunteer.html" class="text-gray-600 hover:text-rose-500">Volunteer</a>
+                    <a href="impact.html" class="text-gray-600 hover:text-rose-500">Impact</a>
+                    <a href="donate.html"> <button class="bg-rose-500 text-white px-4 py-2 rounded-md hover:bg-rose-600">
+                        Get Started
+                    </button></a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="menuBtn" class="text-gray-600 hover:text-gray-900">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-rose-500">Home</a>
+                <a href="donate.html" class="block px-3 py-2 text-gray-600 hover:text-rose-500">Donate Food</a>
+                <a href="volunteer.html" class="block px-3 py-2 text-gray-600 hover:text-rose-500">Volunteer</a>
+                <a href="impact.html" class="block px-3 py-2 text-gray-600 hover:text-rose-500">Impact</a>
+                <button class="w-full text-left px-3 py-2 bg-rose-500 text-white rounded-md hover:bg-rose-600">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')">
+            <span class="w-full h-full absolute opacity-50 bg-black"></span>
+        </div>
+
+        <div class="container relative mx-auto">
+            <div class="items-center flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                    <div class="text-white">
+                        <h1 class="text-5xl font-bold leading-tight">
+                            Share Food, Share Love
+                        </h1>
+                        <p class="mt-4 text-lg text-gray-200">
+                            Connect surplus food from events with those who need it most. Join our mission to reduce food waste and fight hunger in our communities.
+                        </p>
+                        <div class="mt-8 flex justify-center gap-4">
+                           <a href="donate.html"> <button class="bg-rose-500 text-white px-6 py-3 rounded-md hover:bg-rose-600 flex items-center">
+                                Donate Food
+                                <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                            </button></a>
+                            <a href="volunteer.html"><button class="bg-white text-rose-500 px-6 py-3 rounded-md hover:bg-gray-100">
+                                Volunteer Now
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+                    How SharePlate Works
+                </h2>
+                <p class="mt-4 text-xl text-gray-600">
+                    Making food donation simple, efficient, and impactful
+                </p>
+            </div>
+
+            <div class="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" id="features">
+                <!-- Features will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Impact Section -->
+    <div class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+                    Our Impact
+                </h2>
+                <p class="mt-4 text-xl text-gray-600">
+                    Together we're making a difference in our communities
+                </p>
+            </div>
+
+            <div class="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4" id="stats">
+                <!-- Stats will be dynamically inserted here -->
+            </div>
+
+            <div class="mt-20 bg-rose-500 rounded-lg p-8 text-center">
+                <h3 class="text-2xl font-bold text-white">
+                    Ready to Make a Difference?
+                </h3>
+                <p class="mt-4 text-white text-lg">
+                    Join our mission to reduce food waste and fight hunger
+                </p>
+                <button class="mt-6 bg-white text-rose-500 px-8 py-3 rounded-md hover:bg-gray-100 font-semibold">
+                    Get Started Today
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <i data-lucide="heart" class="h-8 w-8 text-rose-500"></i>
+                        <span class="ml-2 text-xl font-bold">SharePlate</span>
+                    </div>
+                    <p class="mt-4 text-gray-400">
+                        Connecting surplus food with those who need it most.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white">Donate Food</a></li>
+                        <li><a href="volunteer.html" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i data-lucide="mail" class="h-5 w-5 mr-2"></i>
+                            info@shareplate.org
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-lucide="phone" class="h-5 w-5 mr-2"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-lucide="map-pin" class="h-5 w-5 mr-2"></i>
+                            123 Sharing Street, NY
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Stay updated with our latest initiatives
+                    </p>
+                    <form id="newsletterForm" class="flex">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            class="px-4 py-2 rounded-l-md w-full focus:outline-none text-gray-900"
+                        />
+                        <button class="bg-rose-500 px-4 py-2 rounded-r-md hover:bg-rose-600">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>© 2024 SharePlate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

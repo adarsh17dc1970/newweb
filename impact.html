@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Impact - SharePlate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/@lucide/web/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <i data-lucide="heart" class="h-8 w-8 text-rose-500"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-800">SharePlate</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-rose-500">Home</a>
+                    <a href="donate.html" class="text-gray-600 hover:text-rose-500">Donate Food</a>
+                    <a href="volunteer.html" class="text-gray-600 hover:text-rose-500">Volunteer</a>
+                    <a href="impact.html" class="text-rose-500">Impact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Impact Overview -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-gray-900">Our Impact</h1>
+                <p class="mt-4 text-xl text-gray-600">Making a difference in our community</p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="flex justify-center">
+                        <i data-lucide="utensils" class="h-8 w-8 text-rose-500"></i>
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-4xl font-bold text-gray-900" id="mealsCounter">0</div>
+                        <div class="mt-2 text-gray-600">Meals Shared</div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="flex justify-center">
+                        <i data-lucide="users" class="h-8 w-8 text-rose-500"></i>
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-4xl font-bold text-gray-900" id="volunteersCounter">0</div>
+                        <div class="mt-2 text-gray-600">Active Volunteers</div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="flex justify-center">
+                        <i data-lucide="building" class="h-8 w-8 text-rose-500"></i>
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-4xl font-bold text-gray-900" id="partnersCounter">0</div>
+                        <div class="mt-2 text-gray-600">Partner Organizations</div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="flex justify-center">
+                        <i data-lucide="clock" class="h-8 w-8 text-rose-500"></i>
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-4xl font-bold text-gray-900" id="hoursCounter">0</div>
+                        <div class="mt-2 text-gray-600">Volunteer Hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Monthly Impact -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Monthly Impact</h2>
+                    <canvas id="monthlyImpactChart"></canvas>
+                </div>
+
+                <!-- Food Distribution -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Food Distribution</h2>
+                    <canvas id="foodDistributionChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Stories -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Success Stories</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Story 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Community event" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Local Wedding Makes a Difference</h3>
+                        <p class="mt-2 text-gray-600">A beautiful wedding celebration led to 200 meals being shared with our local community center.</p>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Food distribution" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Corporate Partnership Success</h3>
+                        <p class="mt-2 text-gray-600">Tech company's monthly donation program provides regular meals to 50 families.</p>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Volunteer team" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Community Champions</h3>
+                        <p class="mt-2 text-gray-600">Our volunteer team's dedication helped us reach our 50,000 meal milestone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Counter animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+
+            function updateCounter() {
+                start += increment;
+                const current = Math.min(Math.round(start), target);
+                element.textContent = current.toLocaleString();
+
+                if (current < target) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+
+            updateCounter();
+        }
+
+        // Start counter animations
+        animateCounter(document.getElementById('mealsCounter'), 50000);
+        animateCounter(document.getElementById('volunteersCounter'), 1000);
+        animateCounter(document.getElementById('partnersCounter'), 200);
+        animateCounter(document.getElementById('hoursCounter'), 5000);
+
+        // Monthly Impact Chart
+        const monthlyCtx = document.getElementById('monthlyImpactChart').getContext('2d');
+        new Chart(monthlyCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Meals Shared',
+                    data: [4200, 4500, 5100, 4800, 5300, 5600],
+                    borderColor: 'rgb(244, 63, 94)',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+
+        // Food Distribution Chart
+        const distributionCtx = document.getElementById('foodDistributionChart').getContext('2d');
+        new Chart(distributionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Community Centers', 'Schools', 'Shelters', 'Food Banks'],
+                datasets: [{
+                    data: [40, 20, 25, 15],
+                    backgroundColor: [
+                        'rgb(244, 63, 94)',
+                        'rgb(251, 113, 133)',
+                        'rgb(253, 164, 175)',
+                        'rgb(254, 205, 211)'
+                    ]
+                }]
+            },            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
